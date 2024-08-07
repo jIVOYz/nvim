@@ -13,7 +13,7 @@ return {
       auto_install = true,
     },
     config = function()
-      ensure_installed = { "lua_ls", "tsserver", "rust_analyzer" }
+      ensure_installed = { "tsserver", "lua_ls", "rust_analyzer" }
     end,
   },
   {
@@ -26,7 +26,7 @@ return {
       local lspconfig = require('lspconfig')
 
       -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-      local servers = { "tsserver", "lua_ls", "rust_analyzer" }
+      local servers = { "tsserver", "lua_ls", "rust_analyzer", "emmet_language_server" }
       for _, lsp in ipairs(servers) do
         lspconfig[lsp].setup({
           -- on_attach = my_custom_on_attach,
