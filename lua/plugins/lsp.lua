@@ -26,13 +26,22 @@ return {
       local lspconfig = require('lspconfig')
 
       -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-      local servers = { "tsserver", "lua_ls", "rust_analyzer", "emmet_language_server" }
+      local servers = { "tsserver", "lua_ls", "rust_analyzer", "emmet_language_server", "cssls", "html" }
       for _, lsp in ipairs(servers) do
         lspconfig[lsp].setup({
           -- on_attach = my_custom_on_attach,
           capabilities = capabilities,
         })
       end
+
+      lspconfig.volar.setup {
+        filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+        init_options = {
+          vue = {
+            hybridMode = false,
+          },
+        },
+      }
 
 
       -- Adds border to pop up windows
