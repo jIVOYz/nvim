@@ -13,7 +13,8 @@ return {
 			auto_install = true,
 		},
 		config = function()
-			ensure_installed = { "tsserver", "html", "cssls", "emmet_language_server", "lua_ls", "rust_analyzer" }
+			ensure_installed = { "ts_ls", "html", "cssls", "emmet_language_server", "lua_ls", "rust_analyzer" }
+      automatic_installation = true
 		end,
 	},
 	{
@@ -24,11 +25,10 @@ return {
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
-      local mason_registry = require("mason-registry")
 
 			-- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 			local servers =
-				{ "tsserver", "lua_ls", "rust_analyzer", "emmet_language_server", "cssls", "html", "clangd", "volar" }
+				{ "ts_ls", "lua_ls", "rust_analyzer", "emmet_language_server", "cssls", "html", "clangd", "volar", "bashls" }
 			for _, lsp in ipairs(servers) do
 				lspconfig[lsp].setup({
 					-- on_attach = my_custom_on_attach,
