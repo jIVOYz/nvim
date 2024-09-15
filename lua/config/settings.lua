@@ -6,4 +6,4 @@ vim.cmd('set shiftwidth=2')
 
 -- relative line numbers
 vim.cmd('set number relativenumber')
-vim.cmd('set termguicolors')
+vim.opt.termguicolors = true
