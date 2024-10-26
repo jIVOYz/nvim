@@ -14,7 +14,19 @@ return {
   {
     "rose-pine/neovim",
     config = function()
-      vim.cmd [[colorscheme rose-pine-main]]
+      -- vim.cmd [[colorscheme rose-pine-main]]
+    end
+  },
+  {
+    "sainnhe/gruvbox-material",
+    config = function()
+      -- vim.cmd [[colorscheme gruvbox-material]]
+    end
+  },
+  {
+    "folke/tokyonight.nvim",
+    config = function()
+      vim.cmd [[colorscheme tokyonight-night]]
     end
   }
 }
