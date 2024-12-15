@@ -45,7 +45,7 @@ return {
 				"bashls",
 				"gopls",
 				"tailwindcss",
-				"python",
+				"pylsp",
 			}
 			for _, lsp in ipairs(servers) do
 				lspconfig[lsp].setup({
