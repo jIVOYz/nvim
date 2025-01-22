@@ -8,7 +8,7 @@ return {
   {
     "mellow-theme/mellow.nvim",
     config = function()
-      vim.cmd [[colorscheme mellow]]
+      -- vim.cmd [[colorscheme mellow]]
     end
   },
   {
@@ -18,7 +18,7 @@ return {
     config = function()
       -- vim.cmd [[colorscheme catppuccin-latte]]
       -- vim.cmd [[colorscheme catppuccin-macchiato]]
-      -- vim.cmd [[colorscheme catppuccin-mocha]]
+      vim.cmd [[colorscheme catppuccin-mocha]]
     end
   },
   {
